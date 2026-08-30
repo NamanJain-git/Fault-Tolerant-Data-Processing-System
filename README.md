@@ -12,7 +12,7 @@ A full-stack event ingestion and processing system designed to handle unreliable
 
 ---
 
-## 1. What assumptions did you make?
+## 1. What assumptions did I make?
 
 * Clients may use different field names, data types, and date formats.
 * The normalization layer supports common field aliases such as `source`/`client`, `metric`/`metric_name`, `amount`/`value`, and `timestamp`/`time`/`date`.
@@ -25,7 +25,7 @@ A full-stack event ingestion and processing system designed to handle unreliable
 
 ---
 
-## 2. How does your system prevent double counting?
+## 2. How does the system prevent double counting?
 
 Incoming data is normalized before the deduplication key is generated. This ensures that equivalent representations such as `"1200"` and `1200` are converted to the same canonical value.
 
